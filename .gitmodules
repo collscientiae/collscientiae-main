@@ -1,0 +1,6 @@
+[submodule "newdoc"]
+	path = newdoc
+	url = ssh://schilly@login.mat.univie.ac.at/users/schilly/proj/sage-newdoc.git
+[submodule "doc"]
+	path = doc
+	url = ssh://schilly@login.mat.univie.ac.at/users/schilly/Dokumente/sage/newdoc-src.git
