@@ -1,5 +1,5 @@
-NEWDOC=newdoc
 # absolute paths, necessary because we call it in a subdir
+MKDOC = collscientia
 SOURCE=doc
 TARGET=www
 
@@ -7,14 +7,14 @@ TARGET=www
 
 render: clean
 	mkdir ${TARGET}
-	cd ${NEWDOC} && python -m sage.newdoc.newdoc ../${SOURCE} ../${TARGET}
+	cd ${MKDOC} && python -m ${MKDOC}.${MKDOC} ../${SOURCE} ../${TARGET}
 
 clean:
 	$(RM) -r ${TARGET}
-	$(MAKE) -C ${NEWDOC} clean
+	$(MAKE) -C ${MKDOC} clean
 
 style:
-	$(MAKE) -C ${NEWDOC} style
+	$(MAKE) -C ${MKDOC} style
 
 test:
-	$(MAKE) -C ${NEWDOC} test
+	$(MAKE) -C ${MKDOC} test

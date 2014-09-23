@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/sage-newdoc.iml" filepath="$PROJECT_DIR$/.idea/sage-newdoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/collscientia.iml" filepath="$PROJECT_DIR$/.idea/collscientia.iml" />
     </modules>
   </component>
 </project>
