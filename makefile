@@ -3,7 +3,7 @@ NEWDOC=newdoc
 SOURCE=doc
 TARGET=www
 
-.PHONY = render clean
+.PHONY = render clean style test
 
 render: clean
 	mkdir ${TARGET}
@@ -15,3 +15,6 @@ clean:
 
 style:
 	$(MAKE) -C ${NEWDOC} style
+
+test:
+	$(MAKE) -C ${NEWDOC} test
