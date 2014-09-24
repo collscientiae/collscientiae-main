@@ -14,8 +14,10 @@
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
     <option name="SCRIPT_NAME" value="" />
     <option name="PARAMETERS" value="../doc ../www" />
+    <RunnerSettings RunnerId="PyDebugRunner" />
     <RunnerSettings RunnerId="PythonCover" />
     <RunnerSettings RunnerId="PythonRunner" />
+    <ConfigurationWrapper RunnerId="PyDebugRunner" />
     <ConfigurationWrapper RunnerId="PythonCover" />
     <ConfigurationWrapper RunnerId="PythonRunner" />
     <method />
