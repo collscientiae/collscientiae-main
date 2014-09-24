@@ -3,4 +3,4 @@
 	url = ssh://schilly@login.mat.univie.ac.at/users/schilly/Dokumente/sage/newdoc-src.git
 [submodule "collscientia"]
 	path = collscientia
-	url = ssh://schilly@login.mat.univie.ac.at/users/schilly/proj/sage-newdoc.git
+	url = ssh://schilly@login.mat.univie.ac.at/users/schilly/proj/collscientia.git
