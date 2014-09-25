@@ -1,9 +1,5 @@
-# Project specific
-
 # the target folder where everything is rendered statically into
 www/
-
-# Created by https://www.gitignore.io
 
 ### PyCharm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
