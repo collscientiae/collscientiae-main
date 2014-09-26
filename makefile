@@ -1,5 +1,6 @@
 # absolute paths, necessary because we call it in a subdir
 MKDOC = collscientia
+THEMES = themes
 SOURCE=doc
 TARGET=www
 
@@ -7,11 +8,13 @@ TARGET=www
 
 render: clean
 	mkdir ${TARGET}
-	cd ${MKDOC} && python -m ${MKDOC}.${MKDOC} ../${SOURCE} ../${TARGET}
+	make -C ${THEMES}
+	cd ${MKDOC} && \
+    python -m ${MKDOC}.${MKDOC} \
+    ../${SOURCE} ../${THEME}/sage ../${TARGET}
 
 clean:
 	$(RM) -r ${TARGET}
-	$(MAKE) -C ${MKDOC} clean
 
 style:
 	$(MAKE) -C ${MKDOC} style

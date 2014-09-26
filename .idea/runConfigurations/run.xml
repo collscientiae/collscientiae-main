@@ -13,7 +13,7 @@
     <module name="collscientia" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
     <option name="SCRIPT_NAME" value="" />
-    <option name="PARAMETERS" value="../doc ../www" />
+    <option name="PARAMETERS" value="../doc ../themes/sage ../www" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <RunnerSettings RunnerId="PyDebugRunner" />
     <RunnerSettings RunnerId="PythonCover" />
