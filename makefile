@@ -3,7 +3,7 @@ MKDOC = collscientia
 SOURCE=doc
 TARGET=www
 
-.PHONY = render clean style test
+.PHONY = render clean style test update
 
 render: clean
 	mkdir ${TARGET}
@@ -18,3 +18,7 @@ style:
 
 test:
 	$(MAKE) -C ${MKDOC} test
+
+update:
+	git pull -u origin master
+	git submodule foreach "git checkout master; git pull -u origin master"
