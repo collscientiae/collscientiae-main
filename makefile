@@ -11,7 +11,7 @@ render: clean
 	make -C ${THEMES}
 	cd ${MKDOC} && \
     python -m ${MKDOC}.${MKDOC} \
-    ../${SOURCE} ../${THEME}/sage ../${TARGET}
+    ../${SOURCE} ../${THEMES}/sage ../${TARGET}
 
 clean:
 	$(RM) -r ${TARGET}
