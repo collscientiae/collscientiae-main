@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/collscientia" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/doc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/themes" vcs="Git" />
   </component>
 </project>
 
