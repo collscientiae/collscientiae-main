@@ -3,8 +3,8 @@
     <option name="INTERPRETER_OPTIONS" value="-m collscientia.collscientia" />
     <option name="PARENT_ENVS" value="true" />
     <envs>
-      <env name="PYTHONIOENCODING" value="UTF-8" />
       <env name="PYTHONUNBUFFERED" value="1" />
+      <env name="PYTHONIOENCODING" value="UTF-8" />
     </envs>
     <option name="SDK_HOME" value="" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/collscientia" />
