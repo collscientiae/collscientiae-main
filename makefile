@@ -15,6 +15,7 @@ render: clean
 
 clean:
 	$(RM) -r ${TARGET}
+	$(MAKE) -C ${MKDOC} clean
 
 style:
 	$(MAKE) -C ${MKDOC} style
