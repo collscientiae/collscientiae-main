@@ -23,6 +23,9 @@ style:
 test:
 	$(MAKE) -C ${MKDOC} test
 
+server:
+	cd www && python -m SimpleHTTPServer 8181
+
 update:
 	git pull -u origin master
 	git submodule foreach "git checkout master; git pull -u origin master"
