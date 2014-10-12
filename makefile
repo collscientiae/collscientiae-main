@@ -6,8 +6,7 @@ TARGET=www
 
 .PHONY = render clean style test update
 
-render: clean
-	mkdir ${TARGET}
+render:
 	make -C ${THEMES}
 	cd ${MKDOC} && \
     python -m ${MKDOC}.${MKDOC} \
@@ -16,6 +15,7 @@ render: clean
 clean:
 	$(RM) -r ${TARGET}
 	$(MAKE) -C ${MKDOC} clean
+	$(MAKE) -C ${THEMES} clean
 
 style:
 	$(MAKE) -C ${MKDOC} style
