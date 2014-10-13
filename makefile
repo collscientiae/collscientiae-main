@@ -1,5 +1,5 @@
 # absolute paths, necessary because we call it in a subdir
-MKDOC = collscientia
+MKDOC = collscientiae
 THEMES = themes
 SOURCE=doc
 TARGET=www

@@ -1,4 +1,4 @@
-# CollScientia Root Project
+# CollScientiaie Root Project
 
 
 Getting Started
@@ -21,5 +21,9 @@ Make sure to not only clone from here or your fork,
 
      git submodule foreach "git checkout master; git pull origin master"
 
+
+### Credits
+
+Correct Latin spelling by Martin Piskernig and David Langer.
 
 
