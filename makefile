@@ -4,9 +4,9 @@ THEMES = themes
 SOURCE=doc
 TARGET=www
 
-.PHONY = render clean style test update
+.PHONY = build clean style test update
 
-render:
+build:
 	make -C ${THEMES}
 	cd ${MKDOC} && \
     python -m ${MKDOC}.${MKDOC} \
@@ -29,3 +29,8 @@ server:
 update:
 	git pull -u origin master
 	git submodule foreach "git checkout master; git pull -u origin master"
+
+publish: build
+	rsync -av --progress --delete -e ssh \
+	  www/ \
+	  schilly@login.mat.univie.ac.at:/users/schilly/public_html/collscientiae/
