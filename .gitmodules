@@ -1,9 +1,9 @@
 [submodule "doc"]
 	path = doc
-	url = ssh://schilly@login.mat.univie.ac.at/users/schilly/Dokumente/sage/newdoc-src.git
+	url = git@github.com:collscientiae/documentation.git
 [submodule "themes"]
 	path = themes
-	url = ssh://schilly@login.mat.univie.ac.at/users/schilly/proj/collscientia-themes.git
+	url = git@github.com:collscientiae/themes.git
 [submodule "collscientiae"]
 	path = collscientiae
-	url = ssh://schilly@login.mat.univie.ac.at/users/schilly/proj/collscientia.git
+	url = git@github.com:collscientiae/collscientiae.git
