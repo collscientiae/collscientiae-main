@@ -13,7 +13,7 @@ build:
     ../${SOURCE} ../${THEMES}/sage ../${TARGET}
 
 clean:
-	$(RM) -r ${TARGET}
+	find www -mindepth 1 ! -wholename 'www/.git' ! -path 'www/.git' -delete
 	$(MAKE) -C ${MKDOC} clean
 	$(MAKE) -C ${THEMES} clean
 
