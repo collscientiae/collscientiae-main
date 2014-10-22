@@ -13,7 +13,7 @@ build:
     ../${SOURCE} ../${THEMES}/sage ../${TARGET}
 
 clean:
-	find www -mindepth 1 ! -wholename 'www/.git' ! -path 'www/.git' -delete
+	cd $(TARGET); find . -mindepth 1 ! -name ".git" ! -path "./.git/*" -delete
 	$(MAKE) -C ${MKDOC} clean
 	$(MAKE) -C ${THEMES} clean
 
@@ -24,13 +24,16 @@ test:
 	$(MAKE) -C ${MKDOC} test
 
 server:
-	cd www && python -m SimpleHTTPServer 8181
+	cd $(TARGET) && python -m SimpleHTTPServer 8181
 
 update:
 	git pull -u origin master
 	git submodule foreach "git checkout master; git pull -u origin master"
 
 publish: build
+	cd $(TARGET); git add -A; git commit -m "published `date --iso=minutes`"; git push origin master -f
+
+publish-uni: build
 	rsync -av --progress --delete -e ssh \
 	  www/ \
 	  schilly@login.mat.univie.ac.at:/users/schilly/public_html/collscientiae/
