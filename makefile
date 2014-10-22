@@ -13,7 +13,7 @@ build:
     ../${SOURCE} ../${THEMES}/sage ../${TARGET}
 
 clean:
-	cd $(TARGET); find . -mindepth 1 ! -name ".git" ! -path "./.git/*" -delete
+	cd $(TARGET) && find . -mindepth 1 ! -name ".git" ! -path "./.git/*" -delete
 	$(MAKE) -C ${MKDOC} clean
 	$(MAKE) -C ${THEMES} clean
 
@@ -31,7 +31,7 @@ update:
 	git submodule foreach "git checkout master; git pull -u origin master"
 
 publish: build
-	cd $(TARGET); git add -A; git commit -m "published `date --iso=minutes`"; git push origin master -f
+	cd $(TARGET) && git add -A . && git commit -m "published `date --iso=minutes`" && git push origin master -f
 
 publish-uni: build
 	rsync -av --progress --delete -e ssh \
