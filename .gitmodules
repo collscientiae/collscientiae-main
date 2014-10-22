@@ -7,3 +7,6 @@
 [submodule "collscientiae"]
 	path = collscientiae
 	url = git@github.com:collscientiae/collscientiae.git
+[submodule "www"]
+	path = www
+	url = git@github.com:collscientiae/collscientiae.github.io.git
