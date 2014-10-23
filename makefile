@@ -13,7 +13,7 @@ build:
     ../${SOURCE} ../${THEMES}/sage ../${TARGET}
 
 clean:
-	#cd $(TARGET) && find . -mindepth 1 ! -wholename "./.git*" -delete
+	$(RM) -r $(TARGET)
 	$(MAKE) -C ${MKDOC} clean
 	$(MAKE) -C ${THEMES} clean
 
@@ -31,9 +31,10 @@ update:
 	git submodule foreach "git checkout master; git pull -u origin master"
 
 publish: build
-	cd $(TARGET) && git add -A . && git commit -m "published `date --iso=minutes`" && git push origin master -f
+	cd $(TARGET) && \
+		git init && \
+		git remote add origin git@github.com:collscientiae/collscientiae.github.io.git && \
+		git add -A . && \
+		git commit -m "published `date --iso=minutes`" && \
+		git push origin master -f
 
-publish-uni: build
-	rsync -av --progress --delete -e ssh \
-	  www/ \
-	  schilly@login.mat.univie.ac.at:/users/schilly/public_html/collscientiae/
