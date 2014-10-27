@@ -27,8 +27,8 @@ server:
 	cd $(TARGET) && python -m SimpleHTTPServer 8181
 
 update:
-	git pull -u origin master
-	git submodule foreach "git checkout master; git pull -u origin master"
+	git pull --ff-only -u origin master
+	git submodule foreach "git checkout master; git pull --ff-only -u origin master"
 
 publish: build
 	cd $(TARGET) && \
