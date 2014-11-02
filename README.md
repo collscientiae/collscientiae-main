@@ -1,4 +1,4 @@
-# CollScientiaie Root Project
+# CollScientiae Root Project
 
 This consists of three parts:
 
