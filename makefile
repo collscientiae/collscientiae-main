@@ -1,16 +1,17 @@
-# absolute paths, necessary because we call it in a subdir
-MKDOC = collscientiae
-THEMES = themes
-SOURCE=doc
-TARGET=www
+# written for python 3
+PYTHON ?= python3
 
-.PHONY = build clean style test update
+# absolute paths, necessary because we call it in a subdir
+MKDOC   = collscientiae
+THEMES  = themes
+SOURCE  = doc
+TARGET  = www
+
+.PHONY  = build clean style test update
 
 build:
 	make -C ${THEMES}
-	cd ${MKDOC} && \
-    python -m ${MKDOC}.${MKDOC} \
-    ../${SOURCE} ../${THEMES}/sage ../${TARGET}
+	cd ${MKDOC} && ${PYTHON} -m ${MKDOC}.${MKDOC} ../${SOURCE} ../${THEMES}/sage ../${TARGET}
 
 clean:
 	$(RM) -r $(TARGET)
