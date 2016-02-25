@@ -6,6 +6,5 @@
     <mapping directory="$PROJECT_DIR$/doc" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/doc/lmfdb" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/themes" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/www" vcs="Git" />
   </component>
 </project>
