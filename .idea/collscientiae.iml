@@ -4,7 +4,7 @@
     <content url="file://$MODULE_DIR$/collscientiae" />
     <content url="file://$MODULE_DIR$/doc" />
     <content url="file://$MODULE_DIR$/themes" />
-    <orderEntry type="jdk" jdkName="Python Canopy 2.7" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Anaconda3" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sass-stdlib" level="application" />
   </component>
@@ -16,4 +16,3 @@
     <option name="PROJECT_TEST_RUNNER" value="Nosetests" />
   </component>
 </module>
-
